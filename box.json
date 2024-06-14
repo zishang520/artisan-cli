@@ -1,0 +1,25 @@
+{
+    "main": "artisan",
+    "output": "artisan.phar",
+    "directories": [
+        "vendor"
+    ],
+    "files": [],
+    "finder": [
+        {
+            "name": "*.php",
+            "exclude": [
+                "*.md",
+                "LICENSE",
+                "composer.json",
+                "tests",
+                "node_modules",
+                ".git",
+                ".github"
+            ],
+            "in": "vendor"
+        }
+    ],
+    "stub": true,
+    "chmod": "0755"
+}

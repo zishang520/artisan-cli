@@ -1,0 +1,2 @@
+<?php
+ $directory = __DIR__; $files = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory)); foreach ($files as $file) { if ($file->isFile() && $file->getExtension() === 'php') { $filePath = $file->getRealPath(); $compressedContent = php_strip_whitespace($filePath); file_put_contents($filePath, $compressedContent); echo "Compressed: $filePath\n"; } } echo "All PHP files have been compressed.\n"; 
